@@ -4,13 +4,18 @@ import { imprimir_todos } from "./cargar-los-todos.js";
 // Llamar a esa funcion para que funcione
 imprimir_todos();
 
+function puente(){
+  let mensaje = document.querySelector(".texto").value;
+  nueva_tarea(mensaje);
+}
 
 
-function nueva_tarea (){
+
+function nueva_tarea (mensaje){
     data_todo_list.push(
     {
       id : "4",
-      mensaje : "Arreglar la cama",
+      mensaje : mensaje,
       estado : true
     }
     );
@@ -20,7 +25,8 @@ imprimir_todos();
 
 document.querySelector(".modal").classList.remove("activar");
 
+document.querySelector(".texto").value = " ";
 
 }
 
-document.querySelector(".btn-tarea").addEventListener("click", nueva_tarea);
+document.querySelector(".btn-tarea").addEventListener("click", puente);

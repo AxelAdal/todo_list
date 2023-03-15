@@ -57,5 +57,12 @@
     display: block;
 }
 .tod{
-    width: 20rem;
+    background-color: blueviolet;
+    height: 14rem;
+    
 }
+.tod{
+    display: flex;
+    flex-direction: column;
+}
+    
