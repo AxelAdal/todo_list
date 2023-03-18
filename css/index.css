@@ -93,3 +93,6 @@
     font-size: 2rem;
     text-align: center;
 }
+.completar {
+    text-decoration: line-through;
+}
