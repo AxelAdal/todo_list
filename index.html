@@ -22,6 +22,8 @@
 
         <h1 class="titulo">ToDo 0.1</h1>
 
+        <hr>
+
         <main class="todo_list">
             <!-- Todas las tareas -->
         </main>
@@ -29,28 +31,20 @@
         <div class="btn-todo" id="btn-todo">
             <span>+</span>
         </div>
-
     </div>
 
- <!--V a estar fuera de rot-->   
-     <!--Normalmente se le llama modal a esa ventanita que sale-->
-     <div class="modal">
-    
-    <div class="tod">      
-        
-        <!--Esta cosa sirve para meter texto la input-->
-        <!--Me faaltaba la clase no era type sino tambien necesitava una clase-->
-        <input type="text" class="texto">
-
-       <button class="btn-tarea">Crear ⚜️</button>
-       <span class="cerrar">❌</span>
+    <div class="modal">
+        <span class="cerrar">❌</span>
+        <div class="caja-tados">
+            <input type="text" class="texto">
+            <div class="btn-crear-tarea">Crear ⚜️</div>    
+        </div>
     </div>
 
-</div>
-
+    <script src="./js/completar-tarea.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/index.js" type="module"></script>
     <!--No  se conecta por qe esta conectado con el dom, por que no esta conectado con nadie más-->
-    <script src="/js/modal.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

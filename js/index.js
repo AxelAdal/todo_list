@@ -1,32 +1,38 @@
+// Se importa la función imprimir_todos
 import { imprimir_todos } from "./cargar-los-todos.js";
 
-
-// Llamar a esa funcion para que funcione
 imprimir_todos();
-
-function puente(){
-  let mensaje = document.querySelector(".texto").value;
-  nueva_tarea(mensaje);
-}
+completar_tarea();
 
 
+function nueva_tarea (){
 
-function nueva_tarea (mensaje){
+    // Recuperarndo el valor de la caja de texto input
+    let mensaje = document.querySelector(".texto").value;
+
+    /* 
+    * Con el método push agregamos un nuevo elemento a la
+    * lista, ya que la lista contiene objetos como elementos
+    * los datos ha agregar deben tener el mismo patron
+    */
+
     data_todo_list.push(
-    {
-      id : "4",
-      mensaje : mensaje,
-      estado : true
-    }
+        {
+            id : "5",
+            mensaje : mensaje,
+            estado: true
+        }
     );
 
-document.querySelector(".todo_list").innerHTML = "";
-imprimir_todos();
-
-document.querySelector(".modal").classList.remove("activar");
-
-document.querySelector(".texto").value = " ";
-
+    // limpiamos la lista de todo list anteriores
+    document.querySelector(".todo_list").innerHTML = "";
+    // Imprime la lista nuevamente
+    imprimir_todos();
+    // Oculta la ventana modal
+    document.querySelector(".modal").classList.remove("activar");
+    // Limpia el contenido de la caja de texto
+    document.querySelector(".texto").value = " ";
 }
 
-document.querySelector(".btn-tarea").addEventListener("click", puente);
+
+document.querySelector(".btn-crear-tarea").addEventListener("click",nueva_tarea);
